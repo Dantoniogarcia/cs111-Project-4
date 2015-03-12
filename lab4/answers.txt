@@ -1,0 +1,59 @@
+# Fill in your name, student ID, and email address in this file.
+# If you are working in a team, fill out the information for both team 
+# members.
+
+# SUBMIT THE LAB ONLY ONCE (from only one partner). This file will be
+# automatically parsed in order to give both team members credit for the
+# lab.
+
+# You need to fill in the EXERCISE sections describing your solutions
+# for Tasks 1, 2, and 3, as well as write the corresponding code.
+# If you did one or more extra credit problems, indicate which one in the
+# appropriate section below (remove the # sign first). If you have any other
+# information you'd like us to know, please add it at the end of the file.
+
+# Partner 1
+Name: Antonio Garcia
+Student ID: 303954287 
+Email: antoniogarcia@ucla.edu
+
+# Partner 2 (if you're working in a team)
+Name: Chris
+Student ID: 
+Email: 
+
+# EXERCISE 1: What method you used to make your peer download and upload
+#    files in parallel?  (~1-3 sentences)
+  We did forking. We downloaded and uploaded processes at the same time.
+	--- Done in bottom of man and marked Task 1:.
+# EXERCISE 2A: What conditions did you find and fix that would have
+#    triggered a buffer overrun bug?  (~1-3 sentences each)
+   1. In both start_download and start_upload.
+	Fixed the file name buffer overloas issue.  You cannot download or looke 
+	for a file with a name that is larger than the max file length.
+    2. In upladtask and downloadtask - fixed the taskbuffer overload.   Will not process requests for
+	upload/downloads that are greater than the file size.
+# EXERCISE 2B: What other robustness problems did you fix?  (~1-3 sentences
+#    each)
+	1.- In TaskUpload-  Will not try to upload a file that does not exist and will not  
+		allow for accessing of a file that is in
+		another directory.
+	
+	2. In TaskDownload: Will not allow for more than 2GB of data to be written to the file at once to prevent someone from sending
+	endless data or extremely huge files.
+	
+	3.In Taskupload  Will not allow to upload a file that is more than 2 GB in size. 
+	
+# EXERCISE 3: Describe the attacks you implemented for "evil mode".  Why
+#    are they attacks?  (~3-10 sentences each)
+	Attack 1: In task download.  We cause a buffer overlaod to the client that recieves
+		  our file download request.  This is done by requesting a filename that is
+			longer then the max file name length.  When they try to store this file name
+		for use they should have a buffer overflow.
+	Attack 2: In task upload. Instead of opening the file that they want we output to the dev/null in non-blocking 
+		mode and this will upload a bunch of data discarded data that is hard to stop.
+	
+# Extra credit problems
+#Extra credit problem: none
+
+# Add any other information you'd like us to know below this line.
