@@ -18,9 +18,9 @@ Student ID: 303954287
 Email: antoniogarcia@ucla.edu
 
 # Partner 2 (if you're working in a team)
-Name: Chris
-Student ID: 
-Email: 
+Name: Chris Nersesyan
+Student ID: 703950678
+Email: chris@nersesyan.com
 
 # EXERCISE 1: What method you used to make your peer download and upload
 #    files in parallel?  (~1-3 sentences)
